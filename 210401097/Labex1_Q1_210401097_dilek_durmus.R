@@ -21,3 +21,8 @@ maps$Year <- as.numeric(gsub("AD", "", maps$Year))
 # 1.7
 maps$Longitude <- as.numeric(maps$Longitude)
 maps$Latitude <- as.numeric(maps$Latitude)
+
+# 1.8) Histogram çizme
+hist(maps$Year, breaks = 10, main = "Histogram of Year", xlab = "Year", col = "purple")
+
+
