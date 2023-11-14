@@ -33,8 +33,15 @@ test_that("maps adlı data.frame’in 5. sütunun adında “Title” kelimesi g
 test_that(" Latitude adlı sütün numeric değerlerden oluşmalıdır.",{
   testthat::expect_true(all(is.numeric(maps$Latitude)))
 })
+#2.11
+test_that("idx nesnesi Global Workspace’de mevcuttur.", {
+  testthat::expect_true(exists("idx"))
+})
 
-
+#2.12
+test_that("idx nesnesinin tipi (class’ı) integer’dir.", {
+  testthat::expect_true(is.integer(idx))
+})
 
 
 
