@@ -42,6 +42,9 @@ test_that("idx nesnesi Global Workspace’de mevcuttur.", {
 test_that("idx nesnesinin tipi (class’ı) integer’dir.", {
   testthat::expect_true(is.integer(idx))
 })
-
+#2.10
+test_that("Longitude adlı sütün numeric değerlerden oluşmalıdır.",{
+  testthat::expect_true(all(is.numeric(maps$Latitude)))
+})
 
 
