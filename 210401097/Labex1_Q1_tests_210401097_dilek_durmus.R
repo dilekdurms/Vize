@@ -21,3 +21,20 @@ test_that(" maps adlı değiken Global Workspace’de mevcuttur.", {
 test_that(" maps nesnesi bir data.frame’dir.", {
   testthat::expect_true(is.data.frame(maps))
 })
+#2.7
+test_that("maps adlı data.frame'in ilk sütunun adı 'City' olmalıdır.", {
+  testthat::expect_equal(names(maps)[1], "City")
+})
+#2.8
+test_that("maps adlı data.frame’in 5. sütunun adında “Title” kelimesi geçmelidir.", {
+  testthat::expect_true(grepl("Title", names(maps)[5]))
+})
+#2.9
+test_that(" Latitude adlı sütün numeric değerlerden oluşmalıdır.",{
+  testthat::expect_true(all(is.numeric(maps$Latitude)))
+})
+
+
+
+
+
