@@ -25,4 +25,7 @@ maps$Latitude <- as.numeric(maps$Latitude)
 # 1.8) Histogram çizme
 hist(maps$Year, breaks = 10, main = "Histogram of Year", xlab = "Year", col = "purple")
 
+# 1.9)
+maps$Longitude[idx] <- maps$Longitude[idx] * -1
+
 

@@ -52,5 +52,9 @@ test_that("Year adlı adlı sütün numeric değerlerden oluşmalıdır.",{
   testthat::expect_true(all(is.numeric(maps$Latitude)))
 })
 #1.7 ÖZELLİĞİNİN TESTLERİ DAHA ÖNCE YAPILDI
-
+#2.14 
+test_that("BONUS Longitude adlı sütunun 3.,  9. ve 10. elementleri negatif numeric değerler içermelidir",{
+  selected_elements <- maps$Longitude[c(3, 9, 10)]
+  expect_true(all(selected_elements < 0) && all(is.numeric(selected_elements)))
+})
 
