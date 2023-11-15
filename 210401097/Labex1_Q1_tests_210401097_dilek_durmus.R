@@ -55,6 +55,26 @@ test_that("Year adlı adlı sütün numeric değerlerden oluşmalıdır.",{
 #2.14 
 test_that("BONUS Longitude adlı sütunun 3.,  9. ve 10. elementleri negatif numeric değerler içermelidir",{
   selected_elements <- maps$Longitude[c(3, 9, 10)]
-  expect_true(all(selected_elements < 0) && all(is.numeric(selected_elements)))
+  testthat::expect_true(all(selected_elements < 0) && all(is.numeric(selected_elements)))
 })
+#2.15
+test_that("finalResult adlı değiken vardır, bir data.frame’dir, 3 sütundan oluşmalıdır ve sütün isimleri sırasıyla Longitude, Latitude ve Year olmalıdır.
+",{
+  testthat::expect_true(exists("finalResult"))
+  testthat::expect_true(is.data.frame(finalResult))
+  testthat::expect_true(ncol(finalResult) == 3)
+  testthat::expect_true(all.equal(names(finalResult), c("Longitude", "Latitude", "Year")))
+})
+
+
+
+
+
+
+
+
+
+
+
+
 
